@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kibungan - Pheno Hunt Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌿 Kibungan</h1>
+            <p class="subtitle">Pheno Hunt Population Tracker</p>
+            <p class="subtitle">Last updated: August 29, 2026 at 11:27 AM</p>
+        </header>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">13</div>
+                <div class="stat-label">Total Plants</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number top-keeper">0</div>
+                <div class="stat-label">Top Keepers</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number keeper">3</div>
+                <div class="stat-label">Keepers</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number culled">5</div>
+                <div class="stat-label">Culled</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">13</div>
+                <div class="stat-label">Photos</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">23.1%</div>
+                <div class="stat-label">Selection Rate</div>
+            </div>
+        </div>
+        
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterPlants('all')">All Plants</button>
+            <button class="filter-btn" onclick="filterPlants('top_keeper')">💚💚 Top Keepers</button>
+            <button class="filter-btn" onclick="filterPlants('keeper')">💚 Keepers</button>
+            <button class="filter-btn" onclick="filterPlants('culled')">☠️ Culled</button>
+        </div>
+        
+        <div class="grid" id="plantGrid">
+
+            <a href="plants/PK01.html" class="plant-card culled" data-status="culled">
+                <img src="https://lh3.googleusercontent.com/d/1spruVNT2KDBJxwW-o58KaY7O1D5HbZLn" class="plant-image" alt="PK01" loading="lazy">
+                <div class="plant-info">
+                    <div class="plant-id">PK01 ☠️</div>
+                    <span class="status-badge culled">Culled</span>
+                    <div class="plant-details">
+                        No details recorded
+                    </div>
+                    <span class="photo-count">📸 1 photos</span>
+                </div>
+            </a>
+
+            <a href="plants/PK03.html" class="plant-card culled" data-status="culled">
+                <img src="https://lh3.googleusercontent.com/d/1ITk9bj4YHVASQTUjQBHYAxUGgDdFZQvw" class="plant-image" alt="PK03" loading="lazy">
+                <div class="plant-info">
+                    <div class="plant-id">PK03 ☠️</div>
+                    <span class="status-badge culled">Culled</span>
+                    <div class="plant-details">
+                        No details recorded
+                    </div>
+                    <span class="photo-count">📸 1 photos</span>
+                </div>
+            </a>
+
+            <a href="plants/PK04.html" class="plant-card culled" data-status="culled">
+                <img src="https://lh3.googleusercontent.com/d/1lPhQ2EdBf73xLgXG51MA3aRwjremEPlb" class="plant-image" alt="PK04" loading="lazy">
+                <div class="plant-info">
+                    <div class="plant-id">PK04 ☠️</div>
+                    <span class="status-badge culled">Culled</span>
+                    <div class="plant-details">
+                        No details recorded
+                    </div>
+                    <span class="photo-count">📸 1 photos</span>
+                </div>
+            </a>
+
+            <a href="plants/PK07.html" class="plant-card keeper" data-status="keeper">
+                <img src="https://lh3.googleusercontent.com/d/1O2WQ5hB4qTSQGLHnek0pAaugBb_Pltc3" class="plant-image" alt="PK07" loading="lazy">
+                <div class="plant-info">
+                    <div class="plant-id">PK07 💚</div>
+                    <span class="status-badge keeper">Keeper</span>
+                    <div class="plant-details">
+                        No details recorded
+                    </div>
+                    <span class="photo-count">📸 1 photos</span>
+                </div>
+            </a>
+
+            <a href="plants/PK09.html" class="plant-card culled" data-status="culled">
+                <img src="https://lh3.googleusercontent.com/d/15GpDHmJg9Q_GjxTCWl7T7Wdouu_uCY8U" class="plant-image" alt="PK09" loading="lazy">
+                <div class="plant-info">
+                    <div class="plant-id">PK09 ☠️</div>
+                    <span class="status-badge culled">Culled</span>
+                    <div class="plant-details">
+                        No details recorded
+                    </div>
+                    <span class="photo-count">📸 1 photos</span>
+                </div>
+            </a>
+
+            <a href="plants/PK10.html" class="plant-card keeper" data-status="keeper">
+                <img src="https://lh3.googleusercontent.com/d/1Qsb9oMVaywke-8zvYTkZvub1q-_iAT9R" class="plant-image" alt="PK10" loading="lazy">
+                <div class="plant-info">
+                    <div class="plant-id">PK10 💚</div>
+                    <span class="status-badge keeper">Keeper</span>
+                    <div class="plant-details">
+                        No details recorded
+                    </div>
+                    <span class="photo-count">📸 1 photos</span>
+                </div>
+            </a>
+
+            <a href="plants/PK11.html" class="plant-card active" data-status="active">
+                <img src="https://lh3.googleusercontent.com/d/1t4EL4ehD0m85Jrz4JYxbvF-MFfyAu9Qc" class="plant-image" alt="PK11" loading="lazy">
+                <div class="plant-info">
+                    <div class="plant-id">PK11 ❓</div>
+                    <span class="status-badge active">Unknown</span>
+                    <div class="plant-details">
+                        No details recorded
+                    </div>
+                    <span class="photo-count">📸 1 photos</span>
+                </div>
+            </a>
+
+            <a href="plants/PK12.html" class="plant-card keeper" data-status="keeper">
+                <img src="https://lh3.googleusercontent.com/d/19_Bn1Lwu2JOrb-hlLnoHDGapQ-_YUoqH" class="plant-image" alt="PK12" loading="lazy">
+                <div class="plant-info">
+                    <div class="plant-id">PK12 💚</div>
+                    <span class="status-badge keeper">Keeper</span>
+                    <div class="plant-details">
+                        No details recorded
+                    </div>
+                    <span class="photo-count">📸 1 photos</span>
+                </div>
+            </a>
+
+            <a href="plants/PK14.html" class="plant-card active" data-status="active">
+                <img src="https://lh3.googleusercontent.com/d/16cZW4xKj5ASQPGIVsJl1_F7gHoUPQdN0" class="plant-image" alt="PK14" loading="lazy">
+                <div class="plant-info">
+                    <div class="plant-id">PK14 ❓</div>
+                    <span class="status-badge active">Unknown</span>
+                    <div class="plant-details">
+                        No details recorded
+                    </div>
+                    <span class="photo-count">📸 1 photos</span>
+                </div>
+            </a>
+
+            <a href="plants/PK19.html" class="plant-card active" data-status="active">
+                <img src="https://lh3.googleusercontent.com/d/1H17yZjJVlnVAd8myhmjy-iquCCr4n6Nd" class="plant-image" alt="PK19" loading="lazy">
+                <div class="plant-info">
+                    <div class="plant-id">PK19 ❓</div>
+                    <span class="status-badge active">Unknown</span>
+                    <div class="plant-details">
+                        No details recorded
+                    </div>
+                    <span class="photo-count">📸 1 photos</span>
+                </div>
+            </a>
+
+            <a href="plants/PL05.html" class="plant-card culled" data-status="culled">
+                <img src="https://lh3.googleusercontent.com/d/16sOeuxPuXwvKHRiEDcCkp6Kq3LRG-noR" class="plant-image" alt="PL05" loading="lazy">
+                <div class="plant-info">
+                    <div class="plant-id">PL05 ☠️</div>
+                    <span class="status-badge culled">Culled</span>
+                    <div class="plant-details">
+                        No details recorded
+                    </div>
+                    <span class="photo-count">📸 1 photos</span>
+                </div>
+            </a>
+
+            <a href="plants/PL06.html" class="plant-card active" data-status="active">
+                <img src="https://lh3.googleusercontent.com/d/1qY_eOQaJx04oSO3nwZABSvd-bZ15wbBD" class="plant-image" alt="PL06" loading="lazy">
+                <div class="plant-info">
+                    <div class="plant-id">PL06 ❓</div>
+                    <span class="status-badge active">Unknown</span>
+                    <div class="plant-details">
+                        No details recorded
+                    </div>
+                    <span class="photo-count">📸 1 photos</span>
+                </div>
+            </a>
+
+            <a href="plants/PL15.html" class="plant-card active" data-status="active">
+                <img src="https://lh3.googleusercontent.com/d/1uFvfavRGVnOogd6htDeYlQbt1iAxtYrq" class="plant-image" alt="PL15" loading="lazy">
+                <div class="plant-info">
+                    <div class="plant-id">PL15 ❓</div>
+                    <span class="status-badge active">Unknown</span>
+                    <div class="plant-details">
+                        No details recorded
+                    </div>
+                    <span class="photo-count">📸 1 photos</span>
+                </div>
+            </a>
+
+        </div>
+        
+        <footer>
+            <div class="links">
+                <a href="#" target="_blank">📊 Google Sheet</a>
+                <a href="https://drive.google.com/drive/folders/1cvzkd9IbVd-AVLdMJTSBvMSGNXrCjUtZ" target="_blank">📁 Drive Folder</a>
+                <a href="https://drive.google.com/drive/folders/1sMv1KeuvE7ObuLUI9olqI34SPZmK9jlM" target="_blank">📸 Photos</a>
+                <a href="https://drive.google.com/drive/folders/14WbVeNiI3OX0zWiTfDdlXVS5v85Gfn7K" target="_blank">📝 Notes</a>
+            </div>
+            <p style="margin-top: 20px;">
+                Automated breeding tracker powered by Claude<br>
+                Cross: Kibungan | Pheno Hunt | Population: 13 plants | Photos: 13
+            </p>
+        </footer>
+    </div>
+    
+    <script>
+        function filterPlants(status) {
+            const cards = document.querySelectorAll('.plant-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            cards.forEach(card => {
+                if (status === 'all' || card.dataset.status === status) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
